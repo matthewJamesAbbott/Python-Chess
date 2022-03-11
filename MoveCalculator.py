@@ -20,6 +20,7 @@ class LinkedList:
         else:
             self.head = newNode
 
+
 # of course were returning a python list here but to keep naming the same I have kept the function name.:)
     def returnVector(self):
         temp = self.head
@@ -42,7 +43,6 @@ class MoveCalculator:
         piece = moveBoard.returnSquare(x, y)
 
         switchedPiece = 0
-
         if (piece == "White Left Rook"):
             switchedPiece = 1
         if (piece == "White Left Knight"):
@@ -83,7 +83,6 @@ class MoveCalculator:
             switchedPiece = 19
 
         list = LinkedList()
-
         match switchedPiece:
 
             case 1: # White Left Rook Moves
@@ -123,25 +122,25 @@ class MoveCalculator:
                 return list
 
             case 2: # White Left Knight Moves
-                if (x < 6 & y < 7 and moveBoard.returnSquare(x + 2, y + 1) == "Empty"):
+                if (x < 6 and y < 7 and moveBoard.returnSquare(x + 2, y + 1) == "Empty"):
                     list.addNode(x + 2, y + 1)
                 elif (x < 6 and y < 7 and (moveBoard.returnSquare(x+2, y+1).find("Black") == False)):
                     list.addNode(x + 2, y + 1)
                 if (x < 6 and y > 0 and moveBoard.returnSquare(x + 2, y - 1) == "Empty"):
                     list.addNode(x + 2, y - 1)
-                elif (x < 6 & y > 0 & (moveBoard.returnSquare(x+2, y-1).find("Black") == False)):
+                elif (x < 6 and y > 0 and (moveBoard.returnSquare(x+2, y-1).find("Black") == False)):
                     list.addNode(x + 2, y - 1)
-                if (x < 7 & y < 6 & moveBoard.returnSquare(x + 1, y + 2) == "Empty"):
+                if (x < 7 and y < 6 and moveBoard.returnSquare(x + 1, y + 2) == "Empty"):
                     list.addNode(x + 1, y + 2)
                 elif (x < 7 and y < 6 and (moveBoard.returnSquare(x+1, y+2).find("Black") == False)):
                     list.addNode(x + 1, y + 2)
-                if (x < 7 & y > 1 & moveBoard.returnSquare(x + 1, y - 2) == "Empty"):
+                if (x < 7 and y > 1 and moveBoard.returnSquare(x + 1, y - 2) == "Empty"):
                     list.addNode(x + 1, y - 2)
                 elif (x < 7 and y > 1 and (moveBoard.returnSquare(x+1, y-2).find("Black") == False)):
                     list.addNode(x + 1, y - 2)
                 if (x > 1 and y < 7 and moveBoard.returnSquare(x - 2, y + 1) == "Empty"):
                     list.addNode(x - 2, y + 1)
-                elif (x > 1 & y < 7 & (moveBoard.returnSquare(x-2, y+1).find("Black") == False)):
+                elif (x > 1 and y < 7 and (moveBoard.returnSquare(x-2, y+1).find("Black") == False)):
                     list.addNode(x - 2, y + 1)
                 if (x > 1 and y < 0 and moveBoard.returnSquare(x - 2, y - 1) == "Empty"):
                     list.addNode(x - 2, y - 1)
@@ -448,25 +447,25 @@ class MoveCalculator:
                 return list
 
             case 11: # Black Left Knight Moves
-                if (x < 6 & y < 7 and moveBoard.returnSquare(x + 2, y + 1) == "Empty"):
+                if (x < 6 and y < 7 and moveBoard.returnSquare(x + 2, y + 1) == "Empty"):
                     list.addNode(x + 2, y + 1)
                 elif (x < 6 and y < 7 and (moveBoard.returnSquare(x+2, y+1).find("White") == False)):
                     list.addNode(x + 2, y + 1)
                 if (x < 6 and y > 0 and moveBoard.returnSquare(x + 2, y - 1) == "Empty"):
                     list.addNode(x + 2, y - 1)
-                elif (x < 6 & y > 0 & (moveBoard.returnSquare(x+2, y-1).find("White") == False)):
+                elif (x < 6 and y > 0 and (moveBoard.returnSquare(x+2, y-1).find("White") == False)):
                     list.addNode(x + 2, y - 1)
-                if (x < 7 & y < 6 & moveBoard.returnSquare(x + 1, y + 2) == "Empty"):
+                if (x < 7 and y < 6 and moveBoard.returnSquare(x + 1, y + 2) == "Empty"):
                     list.addNode(x + 1, y + 2)
                 elif (x < 7 and y < 6 and (moveBoard.returnSquare(x+1, y+2).find("White") == False)):
                     list.addNode(x + 1, y + 2)
-                if (x < 7 & y > 1 & moveBoard.returnSquare(x + 1, y - 2) == "Empty"):
+                if (x < 7 and y > 1 and moveBoard.returnSquare(x + 1, y - 2) == "Empty"):
                     list.addNode(x + 1, y - 2)
                 elif (x < 7 and y > 1 and (moveBoard.returnSquare(x+1, y-2).find("White") == False)):
                     list.addNode(x + 1, y - 2)
                 if (x > 1 and y < 7 and moveBoard.returnSquare(x - 2, y + 1) == "Empty"):
                     list.addNode(x - 2, y + 1)
-                elif (x > 1 & y < 7 & (moveBoard.returnSquare(x-2, y+1).find("White") == False)):
+                elif (x > 1 and y < 7 and (moveBoard.returnSquare(x-2, y+1).find("White") == False)):
                     list.addNode(x - 2, y + 1)
                 if (x > 1 and y < 0 and moveBoard.returnSquare(x - 2, y - 1) == "Empty"):
                     list.addNode(x - 2, y - 1)

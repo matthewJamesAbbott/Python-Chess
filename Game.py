@@ -1,5 +1,6 @@
 from Board import Board
 from MoveCalculator import MoveCalculator
+from MoveCalculator import LinkedList
 
 class Game:
     clientServerToggle = 0
@@ -37,7 +38,7 @@ class Game:
         self.__gameBoard.setSquare(7, 6, "Black Right Knight")
         self.__gameBoard.setSquare(7, 7, "Black Right Rook")
 
-    def movePiece(self, xa, ca, xb, cb):
+    def movePiece(self, ia, ca, ib, cb):
 
         if (ca == 'A' or ca == 'a'):
             ya = 0
@@ -112,16 +113,16 @@ class Game:
         list = LinkedList()
         list = calc.possibleSquares2DArray(xa, ya, self.__gameBoard)
         moveVector = list.returnVector()
-        for i in range(0, moveVector.size()):
+        for i in range(0, len(moveVector) -1):
             a = moveVector[i]
             b = moveVector[i+1]
             i = i+2
-        if (xb == a and yb == b):
-            originalSquare = self.__gameBoard.returnSquare(xa, ya)
-            self.__gameBoard.setSquare(xb, yb, originalSquare)
-            self.__gameBoard.setSquare(xa, ya, "Empty")
+            if (xb == a and yb == b):
+                originalSquare = self.__gameBoard.returnSquare(xa, ya)
+                self.__gameBoard.setSquare(xb, yb, originalSquare)
+                self.__gameBoard.setSquare(xa, ya, "Empty")
 
-        return true
+        return True
 
     def printBoardToTerminal(self):
 

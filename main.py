@@ -58,7 +58,7 @@ def main():
                     y = 0
             while (True):
                 print("Please enter number for were you wish piece to move too or 9 too exit")
-                xa = input()
+                xa = int(input())
                 if (xa == 1 or xa == 2 or xa == 3 or xa == 4 or xa == 5 or xa == 6 or xa == 7 or xa == 8):
                     break
                 elif (xa == 9):
@@ -179,7 +179,7 @@ def main():
         while (True):
             while (True):
                 print("Please enter number for piece you wish to move or 9 too exit")
-                x = input()
+                x = int(input())
                 if (x == 1 or x == 2 or x == 3 or x == 4 or x == 5 or x == 6 or x == 7 or x == 8):
                     break
                 elif (x == 9):
@@ -189,40 +189,40 @@ def main():
                     x = 0
         
     
-        while (True):
-            print("Please enter letter for piece you wish to move or 9 too exit")
-            y = input()
-            if (y == 'a' or y == 'A' or y == 'b' or y == 'B' or y == 'c' or y == 'C' or y == 'd' or y == 'D'
-                or y == 'e' or y == 'E' or y == 'f' or y == 'F' or y == 'g' or y == 'G' or y == 'h' or y == 'H'):
-                break
-            elif (y == '9'):
-                return 0
-            else:
-                print("You have entered an illegal character please try again")
-                y = 0
-        while (True):
-            print("Please enter number for were you wish piece to move too or 9 too exit")
-            xa = input()
-            if (xa == 1 or xa == 2 or xa == 3 or xa == 4 or xa == 5 or xa == 6 or xa == 7 or xa == 8):
-                break
-            elif (xa == 9):
-                return 0
-            else:
-                print("You have entered an illegal character please try again")
-                xa = 0
-        while (True):
-            print("Please enter letter for were you wish piece to move too or 9 too exit")
-            ya = input()
-            if (ya == 'a' or ya == 'A' or ya == 'b' or ya == 'B' or ya == 'c' or ya == 'C' or ya == 'd' or ya == 'D'
-                or ya == 'e' or ya == 'E' or ya == 'f' or ya == 'F' or ya == 'g' or ya == 'G' or ya == 'h' or ya == 'H'):
-                break
-            elif (ya == '9'):
-                return 0
-            else:
-                print("You have entered an illegal character please try again")
-                ya = 0
+            while (True):
+                print("Please enter letter for piece you wish to move or 9 too exit")
+                y = input()
+                if (y == 'a' or y == 'A' or y == 'b' or y == 'B' or y == 'c' or y == 'C' or y == 'd' or y == 'D'
+                    or y == 'e' or y == 'E' or y == 'f' or y == 'F' or y == 'g' or y == 'G' or y == 'h' or y == 'H'):
+                    break
+                elif (y == '9'):
+                    return 0
+                else:
+                    print("You have entered an illegal character please try again")
+                    y = 0
+            while (True):
+                print("Please enter number for were you wish piece to move too or 9 too exit")
+                xa = int(input())
+                if (xa == 1 or xa == 2 or xa == 3 or xa == 4 or xa == 5 or xa == 6 or xa == 7 or xa == 8):
+                    break
+                elif (xa == 9):
+                    return 0
+                else:
+                    print("You have entered an illegal character please try again")
+                    xa = 0
+            while (True):
+                print("Please enter letter for were you wish piece to move too or 9 too exit")
+                ya = input()
+                if (ya == 'a' or ya == 'A' or ya == 'b' or ya == 'B' or ya == 'c' or ya == 'C' or ya == 'd' or ya == 'D'
+                    or ya == 'e' or ya == 'E' or ya == 'f' or ya == 'F' or ya == 'g' or ya == 'G' or ya == 'h' or ya == 'H'):
+                    break
+                elif (ya == '9'):
+                    return 0
+                else:
+                    print("You have entered an illegal character please try again")
+                    ya = 0
 
-        chess.movePiece(x, y, xa, ya)
-        chess.printBoardToTerminal()
+            chess.movePiece(x, y, xa, ya)
+            chess.printBoardToTerminal()
 
 main()
