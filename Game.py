@@ -165,33 +165,33 @@ class Game:
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Empty"):
                         piece = " "
                     if (i == a or i == b or i == c or i == d):
-                        print("\u001b[44m ",  piece,  " ", end="")
+                        print("\u001b[44m",  piece,  "", end="")
                     else:
-                        print("\u001b[101m ", piece, " ", end="")
+                        print("\u001b[101m", piece, "", end="")
 
                 if (i == 0):
                     if (e == 0):
-                        print(" \u001b[49m    \u001b[49m \u001b[39m", end='')
+                        print(" \u001b[49m  \u001b[49m \u001b[39m", end='')
                     if (e == 1):
-                         print(" \u001b[43m  \u001b[30m8  \u001b[49m\u001b[39m", end='')
+                         print(" \u001b[43m \u001b[30m8 \u001b[49m\u001b[39m", end='')
                     if (e == 2):
-                        print(" \u001b[49m  \u001b[33m7  \u001b[49m\u001b[39m", end='')
+                        print(" \u001b[49m \u001b[33m7 \u001b[49m\u001b[39m", end='')
                     if (e == 3):
-                        print(" \u001b[43m  \u001b[30m6  \u001b[49m\u001b[39m", end='')
+                        print(" \u001b[43m \u001b[30m6 \u001b[49m\u001b[39m", end='')
                     if (e == 4):
-                        print(" \u001b[49m  \u001b[33m5  \u001b[49m\u001b[39m", end='')
+                        print(" \u001b[49m \u001b[33m5 \u001b[49m\u001b[39m", end='')
                     if (e == 5):
-                        print(" \u001b[43m  \u001b[30m4  \u001b[49m\u001b[39m", end='')
+                        print(" \u001b[43m \u001b[30m4 \u001b[49m\u001b[39m", end='')
                     if (e == 6):
-                        print(" \u001b[49m  \u001b[33m3  \u001b[49m\u001b[39m", end='')
+                        print(" \u001b[49m \u001b[33m3 \u001b[49m\u001b[39m", end='')
                     if (e == 7):
-                        print(" \u001b[43m  \u001b[30m2  \u001b[49m\u001b[39m", end='')
+                        print(" \u001b[43m \u001b[30m2 \u001b[49m\u001b[39m", end='')
                     if (e == 8):
-                        print(" \u001b[49m \u001b[33m 1  \u001b[49m\u001b[39m", end='')
+                        print(" \u001b[49m\u001b[33m 1 \u001b[49m\u001b[39m", end='')
 
 
 
-            print("\u001b[49m \u001b[39m")
+            print("\u001b[49m\u001b[39m")
 
             if (e == 1):
                 a += 1
@@ -230,7 +230,7 @@ class Game:
                 d += 1
 
 
-        print(" \u001b[43m    " + " \u001b[49m  \u001b[33mA " + " \u001b[43m  \u001b[30mB " + " \u001b[49m  \u001b[33mC " + " \u001b[43m  \u001b[30mD " + " \u001b[49m  \u001b[33mE " + " \u001b[43m  \u001b[30mF " + " \u001b[49m  \u001b[33mG " + " \u001b[43m  \u001b[30mH " + " \u001b[49m \u001b[39m")
+        print(" \u001b[43m  " + " \u001b[49m \u001b[33mA" + " \u001b[43m \u001b[30mB" + " \u001b[49m \u001b[33mC" + " \u001b[43m \u001b[30mD" + " \u001b[49m \u001b[33mE" + " \u001b[43m \u001b[30mF" + " \u001b[49m \u001b[33mG" + " \u001b[43m \u001b[30mH" + " \u001b[49m\u001b[39m")
 
 
 
