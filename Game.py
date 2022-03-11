@@ -111,7 +111,6 @@ class Game:
         calc = MoveCalculator()
         list = LinkedList()
         list = calc.possibleSquares2DArray(xa, ya, self.__gameBoard)
-        moveVector[]
         moveVector = list.returnVector()
         for i in range(0, moveVector.size()):
             a = moveVector[i]
@@ -137,98 +136,98 @@ class Game:
 
         piece = ""
         for e in range(0, 9):
-            for i in range(0, 9)
-                if (e > 0 & i > 0)
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Left Rook" or self.__gameBoard.returnSquare(e - 1, i - 1) == "White Right Rook")
+            for i in range(0, 9):
+                if (e > 0 & i > 0):
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Left Rook" or self.__gameBoard.returnSquare(e - 1, i - 1) == "White Right Rook"):
                         piece = "\e[97m\u265C"
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Left Knight" or self.__gameBoard.returnSquare(e - 1, i - 1) == "White Right Knight")
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Left Knight" or self.__gameBoard.returnSquare(e - 1, i - 1) == "White Right Knight"):
                         piece = "\e[97m\u265E"
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Left Bishop" or self.__gameBoard.returnSquare(e - 1, i - 1) == "White Right Bishop")
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Left Bishop" or self.__gameBoard.returnSquare(e - 1, i - 1) == "White Right Bishop"):
                         piece = "\e[97m\u265D"
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White King")
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White King"):
                         piece = "\e[97m\u265A"
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Queen")
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Queen"):
                         piece = "\e[97m\u265B"
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Pawn")
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Pawn"):
                         piece = "\e[97m\u265F"
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Left Rook" or self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Right Rook")
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Left Rook" or self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Right Rook"):
                         piece = "\e[30m\u265C"
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Left Knight" or self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Right Knight")
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Left Knight" or self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Right Knight"):
                         piece = "\e[30m\u265E"
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Left Bishop" or  self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Right Bishop")
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Left Bishop" or  self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Right Bishop"):
                         piece = "\e[30m\u265D"
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black King")
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black King"):
                         piece = "\e[30m\u265A"
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Queen")
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Queen"):
                         piece = "\e[30m\u265B"
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Pawn")
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Pawn"):
                         piece = "\e[30m\u265F"
-                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Empty")
+                    if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Empty"):
                         piece = " "
-                    if (i == a or i == b or i == c or i == d)
+                    if (i == a or i == b or i == c or i == d):
                         print("\e[44m ",  piece,  " ")
-                    else
+                    else:
                         print("\e[101m ", piece, " ")
 
-                if (i == 0)
-                    if (e == 0)
+                if (i == 0):
+                    if (e == 0):
                         print("\e[49m   \e[49m\e[39m")
-                    if (e == 1)
+                    if (e == 1):
                          print("\e[43m \e[30m8 \e[49m\e[39m")
-                    if (e == 2)
+                    if (e == 2):
                         print("\e[49m \e[33m7 \e[49m\e[39m")
-                    if (e == 3)
+                    if (e == 3):
                         print("\e[43m \e[30m6 \e[49m\e[39m")
-                    if (e == 4)
+                    if (e == 4):
                         print("\e[49m \e[33m5 \e[49m\e[39m")
-                    if (e == 5)
+                    if (e == 5):
                         print("\e[43m \e[30m4 \e[49m\e[39m")
-                    if (e == 6)
+                    if (e == 6):
                         print("\e[49m \e[33m3 \e[49m\e[39m")
-                    if (e == 7)
+                    if (e == 7):
                         print("\e[43m \e[30m2 \e[49m\e[39m")
-                    if (e == 8)
+                    if (e == 8):
                         print("\e[49m\e[33m 1 \e[49m\e[39m")
 
 
 
             print("\e[49m\e[39m")
 
-            if (e == 1)
-                a++
-                b++
-                c++
-                d++
-            elif (e == 2)
-                a--
-                b--
-                c--
-                d--
-            elif (e == 3)
-                a++
-                b++
-                c++
-                d++
-            elif (e == 4)
-                a--
-                b--
-                c--
-                d--
-            elif (e == 5)
-                a++
-                b++
-                c++
-                d++
-            elif (e == 6)
-                a--
-                b--
-                c--
-                d--
-            elif (e == 7)
-                a++
-                b++
-                c++
-                d++
+            if (e == 1):
+                a += 1
+                b += 1
+                c += 1
+                d += 1
+            elif (e == 2):
+                a -= 1
+                b -= 1
+                c -= 1
+                d -= 1
+            elif (e == 3):
+                a += 1
+                b += 1
+                c += 1
+                d += 1
+            elif (e == 4):
+                a -= 1
+                b -= 1
+                c -= 1
+                d -= 1
+            elif (e == 5):
+                a += 1
+                b += 1
+                c += 1
+                d += 1
+            elif (e == 6):
+                a -= 1
+                b -= 1
+                c -= 1
+                d -= 1
+            elif (e == 7):
+                a += 1
+                b += 1
+                c += 1
+                d += 1
 
 
         print("\e[43m   " + "\e[49m \e[33mA " + "\e[43m \e[30mB " + "\e[49m \e[33mC " + "\e[43m \e[30mD " + "\e[49m \e[33mE " + "\e[43m \e[30mF " + "\e[49m \e[33mG " + "\e[43m \e[30mH " + "\e[49m\e[39m")

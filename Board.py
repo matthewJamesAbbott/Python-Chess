@@ -8,14 +8,14 @@ class Board(object):
         __board.append(temp)
         temp = []
 
-    def __init__(self):
+    #def __init__(self):
 
-    def __del__(self):
+    #def __del__(self):
 
     def returnSquare(self,x , y):
-        return self.__board[x[y]]
+        return self.__board[x][y]
 
     def setSquare(self, x, y, piece):
-        self.__board[x[y]] = piece
+        self.__board[x][y] = piece
 
 

@@ -34,9 +34,9 @@ class LinkedList:
 
 class MoveCalculator:
 
-    def __init__(self):
+#    def __init__(self):
 
-    def __del__(self):
+#    def __del__(self):
 
     def possibleSquares2DArray(self, x, y, moveBoard):
         piece = moveBoard.returnSquare(x, y)
@@ -730,9 +730,9 @@ class MoveCalculator:
                     list.addNode(x - 1, y)
                 if (x == 6 and moveBoard.returnSquare(x - 1, y) == "Empty" and moveBoard.returnSquare(x - 2, y) == "Empty"):
                     list.addNode(x - 2, y)
-                if (x != 0 & & y != 7 and moveBoard.returnSquare(x - 1, y + 1) != "Empty"):
+                if (x != 0 and y != 7 and moveBoard.returnSquare(x - 1, y + 1) != "Empty"):
                     list.addNode(x - 1, y + 1)
-                if (x != 0 & & y != 0 and moveBoard.returnSquare(x - 1, y - 1) != "Empty"):
+                if (x != 0 and y != 0 and moveBoard.returnSquare(x - 1, y - 1) != "Empty"):
                     list.addNode(x - 1, y - 1)
                 return list
             case 19: # Empty Square
@@ -751,6 +751,6 @@ class MoveCalculator:
             a = moveList[i]
             b = moveList[i+1]
             i = i+2
-            if (x == a and y == b)
+            if (x == a and y == b):
                 return True
         return False
