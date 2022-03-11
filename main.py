@@ -23,8 +23,8 @@ def main():
                 "   -c [IP ADDRESS]     run Chess as client connecting to [IP ADDRESS]")
 
 
-    x = 10
-    xa = 10
+    x = ''
+    xa = ''
     y = ''
     ya = ''
 
@@ -32,11 +32,11 @@ def main():
         chess.initialiseBoard()
         chess.printBoardToTerminal()
         clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        clientSocket.connect((argv[2], PORT))
+        clientSocket.connect(("127.0.0.1", PORT))
         while (True):
             while (True):
                 print("Please enter number for piece you wish to move or 9 too exit")
-                x = input()
+                x = int(input())
                 if (x == 1 or x == 2 or x == 3 or x == 4 or x == 5 or x == 6 or x == 7 or x == 8):
                     break
                 elif (x == 9):
@@ -81,14 +81,11 @@ def main():
             chess.movePiece(x, y, xa, ya)
             chess.printBoardToTerminal()
 
-            inputString = "    "
-            inputString[0] = x
-            inputString[1] = y
-            inputString[2] = xa
-            inputString[3] = ya
+            inputString = str(x) + y + str(xa) + ya
 
-            clientSocket.send(inputString)
-            receiveMessage = clientSocket.recv(1024)
+
+            clientSocket.send(inputString.encode())
+            receiveMessage = clientSocket.recv(128).decode("utf-8", "ignore")
 
             a = int(receiveMessage[0])
             b = int(receiveMessage[2])
@@ -107,10 +104,11 @@ def main():
         conn, addr = serverSocketHandler.accept()
 
         while (True):
-            receiveMessage = serverSocketHandler.recv(1024)
+            receiveMessage = conn.recv(128)
 
             a = int(receiveMessage[0])
             b = int(receiveMessage[2])
+
             chess.movePiece(a, receiveMessage[1], b, receiveMessage[3])
             chess.printBoardToTerminal()
             while (True):
@@ -164,16 +162,20 @@ def main():
                     ya = 0
 
 
-            chess.movePiece(x, y, xa, ya)
+            chess.movePiece(int(x), y, int(xa), ya)
             chess.printBoardToTerminal()
             inputString = "    "
-            inputString[0] = int(x)
+            inputString[0] = x
             inputString[1] = y
-            inputString[2] = int(xa)
+            inputString[2] = xa
             inputString[3] = ya
             serverSocketHandler.send(inputString)
 
     else:
+        x = ''
+        xa = ''
+        y = ''
+        ya = ''
         chess.initialiseBoard()
         chess.printBoardToTerminal()
         while (True):
