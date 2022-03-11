@@ -137,7 +137,7 @@ class Game:
         piece = ""
         for e in range(0, 9):
             for i in range(0, 9):
-                if (e > 0 & i > 0):
+                if (e > 0 and i > 0):
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Left Rook" or self.__gameBoard.returnSquare(e - 1, i - 1) == "White Right Rook"):
                         piece = "\e[97m\u265C"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Left Knight" or self.__gameBoard.returnSquare(e - 1, i - 1) == "White Right Knight"):
