@@ -139,59 +139,59 @@ class Game:
             for i in range(0, 9):
                 if (e > 0 and i > 0):
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Left Rook" or self.__gameBoard.returnSquare(e - 1, i - 1) == "White Right Rook"):
-                        piece = "\e[97m\u265C"
+                        piece = " \u001b[97m\u265C"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Left Knight" or self.__gameBoard.returnSquare(e - 1, i - 1) == "White Right Knight"):
-                        piece = "\e[97m\u265E"
+                        piece = " \u001b[97m\u265E"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Left Bishop" or self.__gameBoard.returnSquare(e - 1, i - 1) == "White Right Bishop"):
-                        piece = "\e[97m\u265D"
+                        piece = " \u001b[97m\u265D"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White King"):
-                        piece = "\e[97m\u265A"
+                        piece = " \u001b[97m\u265A"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Queen"):
-                        piece = "\e[97m\u265B"
+                        piece = " \u001b[97m\u265B"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "White Pawn"):
-                        piece = "\e[97m\u265F"
+                        piece = " \u001b[97m\u265F"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Left Rook" or self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Right Rook"):
-                        piece = "\e[30m\u265C"
+                        piece = " \u001b[30m\u265C"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Left Knight" or self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Right Knight"):
-                        piece = "\e[30m\u265E"
+                        piece = " \u001b[30m\u265E"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Left Bishop" or  self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Right Bishop"):
-                        piece = "\e[30m\u265D"
+                        piece = " \u001b[30m\u265D"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black King"):
-                        piece = "\e[30m\u265A"
+                        piece = " \u001b[30m\u265A"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Queen"):
-                        piece = "\e[30m\u265B"
+                        piece = " \u001b[30m\u265B"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Black Pawn"):
-                        piece = "\e[30m\u265F"
+                        piece = " \u001b[30m\u265F"
                     if (self.__gameBoard.returnSquare(e - 1, i - 1) == "Empty"):
                         piece = " "
                     if (i == a or i == b or i == c or i == d):
-                        print("\e[44m ",  piece,  " ")
+                        print(" \u001b[44m ",  piece,  " ")
                     else:
-                        print("\e[101m ", piece, " ")
+                        print(" \u001b[101m ", piece, " ")
 
                 if (i == 0):
                     if (e == 0):
-                        print("\e[49m   \e[49m\e[39m")
+                        print(" \u001b[49m    \u001b[49m \u001b[39m")
                     if (e == 1):
-                         print("\e[43m \e[30m8 \e[49m\e[39m")
+                         print(" \u001b[43m  \u001b[30m8  \u001b[49m \u001b[39m")
                     if (e == 2):
-                        print("\e[49m \e[33m7 \e[49m\e[39m")
+                        print(" \u001b[49m  \u001b[33m7  \u001b[49m \u001b[39m")
                     if (e == 3):
-                        print("\e[43m \e[30m6 \e[49m\e[39m")
+                        print(" \u001b[43m  \u001b[30m6  \u001b[49m \u001b[39m")
                     if (e == 4):
-                        print("\e[49m \e[33m5 \e[49m\e[39m")
+                        print(" \u001b[49m  \u001b[33m5  \u001b[49m \u001b[39m")
                     if (e == 5):
-                        print("\e[43m \e[30m4 \e[49m\e[39m")
+                        print(" \u001b[43m  \u001b[30m4  \u001b[49m \u001b[39m")
                     if (e == 6):
-                        print("\e[49m \e[33m3 \e[49m\e[39m")
+                        print(" \u001b[49m  \u001b[33m3  \u001b[49m \u001b[39m")
                     if (e == 7):
-                        print("\e[43m \e[30m2 \e[49m\e[39m")
+                        print(" \u001b[43m  \u001b[30m2  \u001b[49m \u001b[39m")
                     if (e == 8):
-                        print("\e[49m\e[33m 1 \e[49m\e[39m")
+                        print(" \u001b[49m \u001b[33m 1  \u001b[49m \u001b[39m")
 
 
 
-            print("\e[49m\e[39m")
+            print(" \u001b[49m \u001b[39m")
 
             if (e == 1):
                 a += 1
@@ -230,7 +230,7 @@ class Game:
                 d += 1
 
 
-        print("\e[43m   " + "\e[49m \e[33mA " + "\e[43m \e[30mB " + "\e[49m \e[33mC " + "\e[43m \e[30mD " + "\e[49m \e[33mE " + "\e[43m \e[30mF " + "\e[49m \e[33mG " + "\e[43m \e[30mH " + "\e[49m\e[39m")
+        print(" \u001b[43m   " + " \u001b[49m  \u001b[33mA " + " \u001b[43m  \u001b[30mB " + " \u001b[49m  \u001b[33mC " + " \u001b[43m  \u001b[30mD " + " \u001b[49m  \u001b[33mE " + " \u001b[43m  \u001b[30mF " + " \u001b[49m  \u001b[33mG " + " \u001b[43m  \u001b[30mH " + " \u001b[49m \u001b[39m")
 
 
 
