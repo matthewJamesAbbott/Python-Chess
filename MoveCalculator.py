@@ -86,7 +86,7 @@ class MoveCalculator:
         match switchedPiece:
 
             case 1: # White Left Rook Moves
-                for i in range(0, 8):
+                for i in range(x+1, 8):
                     if (moveBoard.returnSquare(i, y) == "Empty"):
                         list.addNode(i, y)
                     elif ((x < 8) and (moveBoard.returnSquare(i, y).find("Black") == False)):
@@ -364,7 +364,7 @@ class MoveCalculator:
                 return list
 
             case 8: # White Right Rook Moves
-                for i in range(0, 8):
+                for i in range(x+1, 8):
                     if (moveBoard.returnSquare(i, y) == "Empty"):
                         list.addNode(i, y)
                     elif ((x < 8) and (moveBoard.returnSquare(i, y).find("Black") == False)):
@@ -411,7 +411,7 @@ class MoveCalculator:
 
 
             case 10: # Black Left Rook Moves
-                for i in range(0, 8):
+                for i in range(x+1, 8):
                     if (moveBoard.returnSquare(i, y) == "Empty"):
                         list.addNode(i, y)
                     elif ((x < 8) and (moveBoard.returnSquare(i, y).find("White") == False)):
@@ -689,7 +689,7 @@ class MoveCalculator:
                 return list
 
             case 17: # Black Right Rook Moves
-                for i in range(0, 8):
+                for i in range(x+1, 8):
                     if (moveBoard.returnSquare(i, y) == "Empty"):
                         list.addNode(i, y)
                     elif ((x < 8) and (moveBoard.returnSquare(i, y).find("White") == False)):
