@@ -226,5 +226,7 @@ def main():
 
             chess.movePiece(x, y, xa, ya)
             chess.printBoardToTerminal()
+            chess.engineMove()
+            chess.printBoardToTerminal()
 
 main()

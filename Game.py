@@ -1,6 +1,7 @@
 from Board import Board
 from MoveCalculator import MoveCalculator
 from MoveCalculator import LinkedList
+from Engine import Engine
 
 class Game:
     clientServerToggle = 0
@@ -123,6 +124,13 @@ class Game:
                 self.__gameBoard.setSquare(xa, ya, "Empty")
 
         return True
+
+    def engineMove(self):
+        moveEngine = Engine()
+        moveArray = moveEngine.resolveMove(self.__gameBoard)
+        self.__gameBoard.setSquare(moveArray[2], moveArray[3], self.__gameBoard.returnSquare(moveArray[0], moveArray[1]))
+        self.__gameBoard.setSquare(moveArray[0], moveArray[1], "Empty")
+
 
     def printBoardToTerminal(self):
 
